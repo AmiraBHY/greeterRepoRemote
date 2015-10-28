@@ -8,41 +8,38 @@ import org.junit.Test;
 
 import edu.esprit.greeter.Greeter;
 
-
 public class GreeterTest {
+	
+	//comment
 	Greeter greeter;
+
 	@Before
-	public void setUp(){
-		
-		 greeter=new Greeter();
-		
-		
-		
+	public void setUp() {
+
+		greeter = new Greeter();
+
 	}
-	
-	
+
 	@Test
-	public void itShouldSayHelloId(){
-		
-		
-		 String result=greeter.sayHello("word");
-		 Assert.assertEquals("Hello word",result);
-		
-		
+	public void itShouldSayHelloId() {
+
+		String result = greeter.sayHello("word");
+		Assert.assertEquals("Hello word", result);
+
 	}
-	@Test(expected=IllegalArgumentException.class)
-	public void itShouldRaiseException(){
-		String param="MAN";
+
+	@Test(expected = IllegalArgumentException.class)
+	public void itShouldRaiseException() {
+		String param = "MAN";
 		greeter.sayHello(param);
-		
+
 	}
-	
-	
+
 	@After
-	public void tearDown(){
-		
-		greeter=null;
-		
+	public void tearDown() {
+
+		greeter = null;
+
 	}
 
 }
